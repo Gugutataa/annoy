@@ -12,6 +12,9 @@ time1 = input("Enter prank time(seconds):")
 time1 = float(time1)
 time1 = round(time1)
 time1= int(time1)
+import win32gui, win32con
+the_program_to_hide = win32gui.GetForegroundWindow()
+win32gui.ShowWindow(the_program_to_hide , win32con.SW_HIDE)
 while countdown > 0:
     print(countdown)
     time.sleep(1)
